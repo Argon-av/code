@@ -28,9 +28,9 @@ if ($.isNode()) {
     cookiesArr.push(jdCookieNode[item])
   })
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {};
-//  dpqd_token = process.env.dpqd_token ? process.env.dpqd_token : '';
-//  if (dpqd_token != '') {
-//    tokens = dpqd_token.split('&');
+  dpqd_token = process.env.dpqd_token ? process.env.dpqd_token : '';
+  if (dpqd_token != '') {
+    tokens = dpqd_token.split('&');
   }
 } else {
   let cookiesData = $.getdata('CookiesJD') || "[]";
